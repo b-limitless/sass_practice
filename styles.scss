@@ -1,0 +1,28 @@
+/* Define standard variables and values for website */
+$bgcolor: lightblue;
+$textcolor: darkblue;
+$fontsize: 18px;
+
+/* Use the variables */
+body {
+  background-color: $bgcolor;
+  color: $textcolor;
+  font-size: $fontsize;
+}
+
+
+@for $i from 1 through 4 {
+    $fontsize: 10px * $i;
+    .font-#{$i} { 
+        font-size: $fontsize;
+        }
+}
+
+@for $i from 1 through 4 {
+  $margintop: 15px * $i;
+  .mt-#{$i*15}{
+    margin-top: $margintop;
+  }
+}
+
+/* generating margin top bottom */
